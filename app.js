@@ -15,8 +15,15 @@ const multer=require('multer')
 const bodyParser = require('body-parser'); 
 const app = express();
 require('express-async-errors');
+ 
 
- app.use(express.static(__dirname + '/public'));
+// edited -----
+app.use(express.static("public"));
+app.use("/uploads", express.static("uploads"));
+// eduted closed
+
+
+
 // app.use('/api/v1/profile', express.static('uploads'));
 
 //app.use(fileUpload());
